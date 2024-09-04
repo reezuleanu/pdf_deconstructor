@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pdf-deconstructor"
+version = "0.1.0"
+description = ""
+authors = ["reezuleanu"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.9"
+flake8 = "^7.1.1"
+pymupdf = "^1.24.10"
+pymupdf4llm = "^0.0.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
