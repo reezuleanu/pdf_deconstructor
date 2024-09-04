@@ -30,6 +30,8 @@ class Deconstructor:
 
         # extract all links
         self.links = re.findall(r'https://[^\s,"]+', self.md_text)
+        for i in range(len(self.links)):
+            self.links[i] = self.links[i].removesuffix(")")
 
     # TODO fix this mess and find the bug
     def _parse_content(self, text: str) -> list[dict]:
@@ -101,6 +103,12 @@ class Deconstructor:
                 heading_content["links"] = re.findall(
                     r'https://[^\s,"]+', "\n".join(lines)
                 )
+
+                # remove parenthesis at the end of links
+                for i in range(len(heading_content["links"])):
+                    heading_content["links"][i] = heading_content["links"][
+                        i
+                    ].removesuffix(")")
 
                 content.append(heading_content)
 
