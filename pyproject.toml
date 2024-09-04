@@ -10,6 +10,7 @@ python = "3.11.9"
 flake8 = "^7.1.1"
 pymupdf = "^1.24.10"
 pymupdf4llm = "^0.0.13"
+ipykernel = "^6.29.5"
 
 
 [build-system]
