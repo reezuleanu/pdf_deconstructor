@@ -6,3 +6,16 @@ It takes a PDF file and converts it into a hierarchy of sections and subsections
 
 ## Main use
 The intended use is to be part of a larger ingestion pipeline of unstructured data for RAG purposes.
+
+## How to use
+```py
+from pdf_deconstructor import Deconstructor as PDFDeconstructor
+
+output = PDFDeconstructor.parse("file.pdf", start_page=1)
+
+# to see extracted tree
+for header in output.content:
+    print(header.tree())
+```
+
+Each header contains the raw text, markdown syntax text, and extracted links, as well as sub headers

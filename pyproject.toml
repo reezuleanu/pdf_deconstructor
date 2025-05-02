@@ -1,0 +1,16 @@
+[project]
+name = "pdf-deconstructor"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "pydantic>=2.11.4",
+    "pymupdf>=1.25.5",
+    "pymupdf4llm>=0.0.22",
+    "validators>=0.35.0",
+]
+
+[build-system]
+requires = ["setuptools", "wheel", "uv"]
+build-backend = "setuptools.build_meta"
